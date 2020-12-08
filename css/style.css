@@ -1,0 +1,237 @@
+@font-face{
+    font-family: bits;
+    src: url("../fonts/Pixelmania.ttf");
+}
+
+@font-face{
+    font-family: bitext;
+    src: url("../fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+body{
+    background-color: rgb(19, 34, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: bitext;
+    color: rgb(236, 103, 41);
+}
+
+header{
+    display: flex;
+    min-height: 120px;
+    justify-content: center;
+    align-items: center;
+    font-family: bits;
+    color: rgb(194, 87, 37);
+}
+
+/*MENU DESPLEGABLE*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+ul, ol {
+    list-style:none;
+    color: rgb(236, 103, 41);
+    font-family: bitext;
+    margin-right: 42px;
+}
+
+#desplegable > li {
+    float:left;
+}
+
+#desplegable li a {
+    background-color:rgb(19, 34, 48);
+    color: rgb(194, 87, 37);
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+    border: solid 1px  rgb(194, 87, 37) ;
+}
+
+#desplegable li a:hover {
+    background-color:#434343;
+}
+
+#desplegable li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+    margin-left: -40px;
+}
+
+#desplegable li:hover > ul {
+    display:block;
+}
+
+#desplegable li ul li {
+    position:relative;
+}
+
+#desplegable li ul li ul {
+    right:-140px;
+    top:0px;
+}
+
+/*FIN MENU DESPLEGABLE*/
+
+
+/*CUERPO PRINCIPAL*/
+section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+#catalogo{
+    width: 900px;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    min-height: 650px;
+}
+
+#intro img{
+    width: 300px;
+    height: auto;
+    border: dotted 1px rgb(236, 103, 41);
+    margin-left: 30px;
+}
+
+.texto{
+    color: rgb(194, 87, 37);
+}
+
+.texto p{
+    color: rgb(236, 103, 41);
+    font-family: bitext;
+    font-size: larger;
+}
+
+.texto h3{
+    font-family: bits;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: dotted 3px rgb(236, 103, 41);
+    padding: 20px;
+}
+
+.producto img{
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.descripcion{
+    font-size: larger;
+}
+
+.descripcion h2{
+    text-decoration: underline;
+}
+
+.boton{
+    background-color:rgb(19, 34, 48);
+    color: rgb(194, 87, 37);
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+    border: solid 1px  rgb(194, 87, 37) ;
+}
+
+.boton:hover{
+    background-color:#434343;
+}
+
+#carrito{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+table{
+    border: solid 2px  rgb(194, 87, 37) ;
+    color: rgb(194, 87, 37);
+}
+
+table a:link, table a:visited{
+    color: rgb(194, 87, 37);
+}
+
+th,td{
+    padding: 10px;
+    border: dotted 1px rgb(236, 103, 41);
+}
+
+.delete{
+    background-color:rgb(19, 34, 48);
+    color: rgb(194, 87, 37);
+    text-decoration:none;
+    padding:5px 6px;
+    display:block;
+    border: solid 1px  rgb(194, 87, 37) ;
+}
+
+#carrito .boton{
+    margin-top: 15px;
+}
+/*FIN CUERPO PRINCIPAL*/
+
+/*FOOTER*/
+
+footer{
+    font-family: bitext;
+    margin-top: 10px;
+    height: 150px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    color: rgb(236, 103, 41);
+}
+
+footer p{
+    margin-top: 60px;
+    font-size: 22px;
+    margin-left: 40px;
+    margin-right: 40px;
+    letter-spacing: 3px;
+}
+
+footer img{
+    height: 60px;
+    width: 60px;
+    margin-top: 40px;
+}
+footer img:hover{
+    animation-name: breath;
+    animation-duration: 1.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/*FIN FOOTER*/
+
+
+@keyframes breath{
+    from{transform: scale(100%);}
+    50%{transform: scale(115%);}
+    to{transform: scale(100%);}
+}
