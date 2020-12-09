@@ -7,7 +7,9 @@
     <head>
 
     <?php
-    
+        /*Los siguientes condicionales sirven para saber que producto quieres
+        añadir el carrito, si el elemento ya existe suma el contador (Valor 
+        de la cookie), en caso contrario crea la cookie*/
         if($_GET["doom"] == "doom"){
 
             $cont = $_COOKIE["doom"];

@@ -102,6 +102,10 @@ article{
     min-height: 650px;
 }
 
+#intro{
+    min-height: 500px;
+}
+
 #intro img{
     width: 300px;
     height: auto;
@@ -165,6 +169,7 @@ article{
     align-items: center;
     justify-content: center;
     width: auto;
+    min-height: 300px;
 }
 
 table{
@@ -190,9 +195,14 @@ th,td{
     border: solid 1px  rgb(194, 87, 37) ;
 }
 
+.delete:hover{
+    background-color:#434343;
+}
+
 #carrito .boton{
     margin-top: 15px;
 }
+
 /*FIN CUERPO PRINCIPAL*/
 
 /*FOOTER*/

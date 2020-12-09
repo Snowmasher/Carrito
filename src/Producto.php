@@ -20,7 +20,7 @@
         }
     }
 
-    
+    //TODO: Conexión BD para cargar datos en la vista
     
 
 ?>

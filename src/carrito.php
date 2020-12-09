@@ -31,6 +31,9 @@
                 <?php
                     require("Producto.php");
 
+                    //Datos provisionales antes de BD
+                    //TODO: Cargar objetos desde BD
+
                     $doom = new Producto();
                     $doom->setNombre("Doom");
                     $doom->setPrecio(9.99);
@@ -56,22 +59,27 @@
                     <?php
 
                         $delete = $_GET["delete"];
-                        
-                        if ($_GET != null || $_GET["delete"] != null || $_GET["delete"] != "") {
+                        //Comprobación de que elemento se debe borrar
+                        if ($_GET != null && $_GET["delete"] != null && $_GET["delete"] != "") {
                             if($delete == "doom"){
-                                setcookie("doom", 0);
+                                unset($_COOKIE['doom']);
+                                setcookie("doom", null, -1, '/');
                             }
                             elseif($delete == "metroid"){
-                                setcookie("metroid", 0);
+                                unset($_COOKIE['metroid']);
+                                setcookie("metroid", null, -1, '/');
                             }
                             elseif($delete == "street"){
-                                setcookie("street", 0);
+                                unset($_COOKIE['street']);
+                                setcookie("street", null, -1, '/');
                             }
                             elseif($delete == "space"){
-                                setcookie("space", 0);
+                                unset($_COOKIE['space']);
+                                setcookie("space",  null, -1, '/');
                             }
                         }
 
+                        //Creacion de la tabla, se añaden botones para acción de borrado del carrito
                         foreach($_COOKIE as $key => $value){
                             
                             if($key == "doom" && $value != 0){
